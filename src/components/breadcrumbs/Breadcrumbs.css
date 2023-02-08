@@ -1,0 +1,18 @@
+
+.Breadcrumbs a{
+
+    color: rgb(97, 97, 97);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;    
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+.Breadcrumbs a:hover
+{
+    font-size: 14px; 
+    font-weight: 600;   
+}
+
+
