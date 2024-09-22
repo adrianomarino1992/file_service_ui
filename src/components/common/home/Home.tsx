@@ -8,22 +8,26 @@ function Home()
 
     useEffect(()=>{
 
+     
+
         (async () =>
         {
+          
           const domain = window.location.hostname;
     
           try{
     
             let getDefaultTaskResult = await fetch(`http://${domain}:5555/fs/default-dir`);
     
-            let dirPath = await getDefaultTaskResult.json();
+
+            let dirPath = await getDefaultTaskResult.text();
             
             if(dirPath)
                 setDir(`http://${window.location.hostname}:${window.location.port}/spread?folder=${dirPath}`);
            
           }catch(err)
-          {
-            console.debug(err);      
+          {           
+            console.error(err);      
           }
     
     
@@ -32,6 +36,8 @@ function Home()
       }, [])
 
       
+      
+
     return (
         <div className="Home">
             <h1>File service application</h1>

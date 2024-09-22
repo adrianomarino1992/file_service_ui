@@ -37,7 +37,7 @@ function App() {
       element: <NotFound />,
       errorElement: <NotFound />,
     },
-  ]);
+  ]);  
   
 
   return (

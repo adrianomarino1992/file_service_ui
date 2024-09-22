@@ -92,7 +92,7 @@ function Directory (){
 
     useEffect(()=>{
         
-
+       
         (async()=>{
 
            let dirPath = query.get("folder");
@@ -148,14 +148,15 @@ function Directory (){
                   });
             };
 
-           if(!dirPath || dirPath.trim() === '')
-               window.location.href=`/`;
             
+
+           if(!dirPath || dirPath.trim() === '')
+               window.location.href=`/`;           
                
-            if(dir.Childrens)
-                return;
+           
 
            let getFoldersTaskResult = await fetch(`http://${window.location.hostname}:5555/fs/folders?folder=${dirPath}`);
+           
 
            let folders = await getFoldersTaskResult.json() as string[];
 
